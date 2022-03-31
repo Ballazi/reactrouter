@@ -31,6 +31,7 @@ function Home()
   return(
     <div>
       <h1>This is Home Component</h1>
+      <Link className='btn btn-success' to="/learn">Learn</Link>
     </div>
   )
 }
@@ -79,6 +80,7 @@ function Bundles()
     <div>
       <h1>Bundle List</h1>
       <h4>Bundle Card</h4>
+
     </div>
   )
 }
@@ -102,10 +104,12 @@ function CourseId()
 
 function Dashboard()
 {
+  const navigate = useNavigate();
   const price = useLocation();
   return(
     <div>
       <h1>course price : {price.state}</h1>
+      <button className='btn btn-success' onClick={()=>navigate("/learn")}>Back</button>
     </div>
   )
 }
